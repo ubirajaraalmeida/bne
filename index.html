@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BNE :: Banco Nacional de Empregos</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+
+<body>
+    <header>
+        <img src="./assets/img/logo_bne.png" alt="Logo BNE" class="logo" />
+        <h1>Home Office</h1>
+    </header>
+    <div class="container">
+        <section class="form">
+            <h2>Temos algumas perguntas que nos ajudarão a entender o que você precisa.</h2>
+            <form action="">
+                <div id="div_name" class="form-group">
+                    <label for="name">Nome</label>
+                    <div class="box"><input type="text" id="name" placeholder="Coloque seu nome"></div>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <div class="box"><input type="email" id="email" placeholder="Coloque seu endereço de email"></div>
+                </div>
+                <div class="form-group">
+                    <label for="feel">De 1 a 10, como você se sente?</label>
+                    <div class="box"><input type="number" id="feel" placeholder="Digite um número entre 1 e 10"></div>
+                </div>
+                <div class="form-group">
+                    <label for="work">Você trabalha em qual Cômodo?</label>
+                    <div class="box">
+                        <select id="work">
+                            <option value="">Selecione um Cômodo</option>
+                            <option value="1">Quarto</option>
+                            <option value="2">Sala</option>
+                            <option value="3">Escritório</option>
+                            <option value="4">Cozinha</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Qual seu horário mais produtivo?</label>
+                    <div class="box">
+                        <ul>
+                            <li>
+                                <input type="radio" id="morning" name="radio-group" checked value="1">
+                                <label for="morning">Manhã</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="afternoon" name="radio-group" value="2">
+                                <label for="afternoon">Tarde</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="night" name="radio-group" value="3">
+                                <label for="night">Noite</label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Como você está se sentindo? <span>(Todas podem ser marcadas)</span></label>
+                    <div class="box">
+                        <ul>
+                            <li>
+                                <input class="checkbox" id="well" type="checkbox" value="1" checked>
+                                <label for="well">Bem</label>
+                            </li>
+                            <li>
+                                <input class="checkbox" id="confused" type="checkbox" value="2">
+                                <label for="confused">Confuso</label>
+                            </li>
+                            <li>
+                                <input class="checkbox" id="tired_out" type="checkbox" value="3">
+                                <label for="tired_out">Cansado</label>
+                            </li>
+                            <li>
+                                <input class="checkbox" id="excited" type="checkbox" value="4">
+                                <label for="excited">Empolgado</label>
+                            </li>
+                            <li>
+                                <input class="checkbox" id="elate" type="checkbox" value="5">
+                                <label for="elate">Entusiasmado</label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="experience">Descreva a experiência com o Home Office</label>
+                    <div class="box"><textarea id="experience"
+                            placeholder="Descreva sua experiência aqui..."></textarea></div>
+                </div>
+
+                <div class="form-btn">
+                    <button type="button" class="btn-send" onclick="validar();">Enviar</button>
+                </div>
+            </form>
+        </section>
+    </div>
+    <script type="text/javascript" src="./assets/js/form.js"></script>
+</body>
+
+</html>

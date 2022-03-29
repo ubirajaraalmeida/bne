@@ -1,0 +1,279 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #a9d7e9;
+  min-height: 100vh;
+  font-family: "Roboto", sans-serif;
+  padding: 20px;
+}
+
+header {
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 10px;
+  text-align: center;
+}
+header .logo {
+  width: 150px;
+  height: auto;
+  margin: auto;
+}
+header h1 {
+  margin-top: 10px;
+  font-size: 2em;
+}
+
+.container h2 {
+  text-align: center;
+  font-size: 1.3em;
+  margin-bottom: 20px;
+}
+.container section.form {
+  background-color: #f3f3f3;
+  width: 90%;
+  margin: auto;
+  padding: 30px;
+  border-radius: 10px;
+}
+.container section.form form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.container section.form .form-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+.container section.form .form-group > label {
+  display: block;
+  position: relative;
+  width: 254px;
+  padding: 10px;
+  text-align: right;
+  font-size: 0.9em;
+}
+.container section.form .form-group .box {
+  padding: 10px;
+  display: block;
+  width: 254px;
+}
+.container section.form .form-group ::-webkit-input-placeholder {
+  font-size: 0.8em;
+}
+.container section.form .form-group ::-moz-placeholder {
+  font-size: 0.8em;
+}
+.container section.form .form-group :-ms-input-placeholder {
+  font-size: 0.8em;
+}
+.container section.form .form-group :-moz-placeholder {
+  font-size: 0.8em;
+}
+.container section.form .form-group ul {
+  list-style: none;
+}
+.container section.form .form-group ul li {
+  margin: 0 0 5px;
+  min-width: 310px;
+}
+.container section.form .form-group [type=text],
+.container section.form .form-group [type=number],
+.container section.form .form-group [type=email],
+.container section.form .form-group select,
+.container section.form .form-group textarea {
+  width: 100%;
+  font-family: "Roboto Slab", serif;
+  font-size: 0.9em;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+.container section.form .form-group [type=radio]:checked {
+  position: absolute;
+  left: -9999px;
+}
+.container section.form .form-group [type=radio]:checked + label {
+  position: relative;
+  padding-left: 28px;
+  cursor: pointer;
+  line-height: 20px;
+  display: inline-block;
+  color: #302727;
+  font-family: "Roboto Slab", serif;
+  font-size: 0.9em;
+}
+.container section.form .form-group [type=radio]:checked + label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #dddddd;
+  border-radius: 100%;
+  background: #ffffff;
+}
+.container section.form .form-group [type=radio]:checked + label:after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background: #a9d7e9;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  border-radius: 100%;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+.container section.form .form-group [type=radio]:not(:checked) {
+  position: absolute;
+  left: -9999px;
+}
+.container section.form .form-group [type=radio]:not(:checked) + label {
+  position: relative;
+  padding-left: 28px;
+  cursor: pointer;
+  line-height: 20px;
+  display: inline-block;
+  color: #302727;
+  font-family: "Roboto Slab", serif;
+  font-size: 0.9em;
+}
+.container section.form .form-group [type=radio]:not(:checked) + label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #dddddd;
+  border-radius: 100%;
+  background: #ffffff;
+}
+.container section.form .form-group [type=radio]:not(:checked) + label:after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background: #a9d7e9;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  border-radius: 100%;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  opacity: 0;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+.container section.form .form-group .checkbox {
+  position: absolute;
+  opacity: 0;
+}
+.container section.form .form-group .checkbox + label {
+  position: relative;
+  cursor: pointer;
+  padding: 0;
+  font-family: "Roboto Slab", serif;
+  font-size: 0.9em;
+}
+.container section.form .form-group .checkbox + label:before {
+  content: "";
+  margin-top: 2px;
+  margin-right: 10px;
+  display: inline-block;
+  vertical-align: text-top;
+  width: 15px;
+  height: 15px;
+  background: white;
+  border: 1px solid #ddd;
+}
+.container section.form .form-group .checkbox:hover + label:before {
+  background: #a9d7e9;
+}
+.container section.form .form-group .checkbox:checked + label:before {
+  background: #a9d7e9;
+}
+.container section.form .form-group .checkbox:checked + label:after {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 10px;
+  background: white;
+  width: 2px;
+  height: 2px;
+  -webkit-box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white, 4px -6px 0 white, 4px -8px 0 white;
+  box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white, 4px -6px 0 white, 4px -8px 0 white;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.container section.form .form-group .checkbox:disabled + label {
+  color: #b8b8b8;
+  cursor: auto;
+}
+.container section.form .form-group .checkbox:disabled + label:before {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background: #ddd;
+}
+.container section.form .form-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.container section.form .form-btn .btn-send {
+  margin: 20px 0 0;
+  width: 100px;
+  height: 35px;
+  background-color: #6ba2ce;
+  border: 0;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.container section.form .form-btn .btn-send:hover {
+  background-color: #4d8ec3;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+@media (max-width: 680px) {
+  .container h2 {
+    font-size: 1em;
+  }
+
+  .container section.form .form-group {
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .container section.form .form-group label {
+    width: 100%;
+    text-align: left;
+    padding: 0 10px;
+    margin-top: 10px;
+  }
+  .container section.form .form-group .box {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

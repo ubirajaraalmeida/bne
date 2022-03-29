@@ -1,0 +1,256 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap")
+
+// Fonts
+$main-font: 'Roboto', sans-serif
+$form-font: 'Roboto Slab', serif
+
+// COLORS
+$color-default: #a9d7e9
+$form-bg-color: #f3f3f3
+$font-color: #302727
+$bg-white: #ffffff
+$color-input: #dddddd
+$btn: #6ba2ce
+$btn-hover: #4d8ec3
+
+*
+    margin: 0
+    padding: 0
+    -webkit-box-sizing: border-box
+    box-sizing: border-box
+body
+    background-color: $color-default
+    min-height: 100vh
+    font-family: $main-font
+    padding: 20px
+header
+    display: flex
+    -ms-flex-direction: column
+    flex-direction: column
+    padding: 10px
+    text-align: center
+    .logo
+        width: 150px
+        height: auto
+        margin: auto
+    h1
+        margin-top: 10px
+        font-size: 2em
+.container
+    h2
+        text-align: center
+        font-size: 1.3em
+        margin-bottom: 20px
+    section
+        &.form
+            background-color: $form-bg-color
+            width: 90%
+            margin: auto
+            padding: 30px
+            border-radius: 10px
+            form
+                display: -webkit-box
+                display: -ms-flexbox
+                display: flex
+                -ms-flex-direction: column
+                flex-direction: column
+            .form-group
+                display: flex
+                flex-direction: row
+                justify-content: center
+                position: relative
+                width: 100%
+                & > label
+                    display: block
+                    position: relative
+                    width: 254px
+                    padding: 10px
+                    text-align: right
+                    font-size: .9em
+                .box
+                    padding: 10px
+                    display: block
+                    width: 254px
+                ::-webkit-input-placeholder
+                    font-size: .8em
+                ::-moz-placeholder
+                    font-size: .8em
+                :-ms-input-placeholder
+                    font-size: .8em
+                :-moz-placeholder
+                    font-size: .8em
+                ul
+                    list-style: none
+                    li
+                        margin: 0 0 5px
+                        min-width: 310px
+                [type="text"],
+                [type="number"],
+                [type="email"],
+                select,
+                textarea
+                    width: 100%
+                    font-family: $form-font
+                    font-size: .9em
+                    padding: 5px
+                    border: 1px solid $color-input
+                    border-radius: 4px
+                [type="radio"]:checked
+                    position: absolute
+                    left: -9999px
+                    & + label
+                        position: relative
+                        padding-left: 28px
+                        cursor: pointer
+                        line-height: 20px
+                        display: inline-block
+                        color: $font-color
+                        font-family: $form-font
+                        font-size: .9em
+                        &:before
+                            content: ''
+                            position: absolute
+                            left: 0
+                            top: 0
+                            width: 18px
+                            height: 18px
+                            border: 1px solid $color-input
+                            border-radius: 100%
+                            background: $bg-white
+                        &:after
+                            content: ''
+                            width: 12px
+                            height: 12px
+                            background: $color-default
+                            position: absolute
+                            top: 4px
+                            left: 4px
+                            border-radius: 100%
+                            -webkit-transition: all 0.2s ease
+                            transition: all 0.2s ease
+                            opacity: 1
+                            -webkit-transform: scale(1)
+                            transform: scale(1)
+                [type="radio"]:not(:checked)
+                    position: absolute
+                    left: -9999px
+                    & + label
+                        position: relative
+                        padding-left: 28px
+                        cursor: pointer
+                        line-height: 20px
+                        display: inline-block
+                        color: $font-color
+                        font-family: $form-font
+                        font-size: .9em
+                        &:before
+                            content: ''
+                            position: absolute
+                            left: 0
+                            top: 0
+                            width: 18px
+                            height: 18px
+                            border: 1px solid $color-input
+                            border-radius: 100%
+                            background: $bg-white
+                        &:after
+                            content: ''
+                            width: 12px
+                            height: 12px
+                            background: $color-default
+                            position: absolute
+                            top: 4px
+                            left: 4px
+                            border-radius: 100%
+                            -webkit-transition: all 0.2s ease
+                            transition: all 0.2s ease
+                            opacity: 0
+                            -webkit-transform: scale(0)
+                            transform: scale(0)
+                .checkbox
+                    position: absolute
+                    opacity: 0
+                    & + label
+                        position: relative
+                        cursor: pointer
+                        padding: 0
+                        font-family: $form-font
+                        font-size: .9em
+                        &:before
+                            content: ''
+                            margin-top: 2px
+                            margin-right: 10px
+                            display: inline-block
+                            vertical-align: text-top
+                            width: 15px
+                            height: 15px
+                            background: $bg-white
+                            border: 1px solid $color-input
+                    &:hover
+                        & + label
+                            &:before
+                                background: $color-default
+                    &:checked
+                        & + label
+                            &:before
+                                background: $color-default
+                            &:after
+                                content: ''
+                                position: absolute
+                                left: 3px
+                                top: 10px
+                                background: $bg-white
+                                width: 2px
+                                height: 2px
+                                -webkit-box-shadow: 2px 0 0 $bg-white, 4px 0 0 $bg-white, 4px -2px 0 $bg-white, 4px -4px 0 $bg-white, 4px -6px 0 $bg-white, 4px -8px 0 $bg-white
+                                box-shadow: 2px 0 0 $bg-white, 4px 0 0 $bg-white, 4px -2px 0 $bg-white, 4px -4px 0 $bg-white, 4px -6px 0 $bg-white, 4px -8px 0 $bg-white
+                                -webkit-transform: rotate(45deg)
+                                transform: rotate(45deg)
+                    &:disabled
+                        & + label
+                            color: #b8b8b8
+                            cursor: auto
+                            &:before
+                                -webkit-box-shadow: none
+                                box-shadow: none
+                                background: $color-input
+
+            .form-btn
+                display: -webkit-box
+                display: -ms-flexbox
+                display: flex
+                -webkit-box-pack: center
+                -ms-flex-pack: center
+                justify-content: center
+                .btn-send
+                    margin: 20px 0 0
+                    width: 100px
+                    height: 35px
+                    background-color: $btn
+                    border: 0
+                    border-radius: 5px
+                    color: $bg-white
+                    cursor: pointer
+                    -webkit-transition: all 0.2s ease
+                    transition: all 0.2s ease
+                    &:hover
+                        background-color: $btn-hover
+                        -webkit-transition: all 0.2s ease
+                        transition: all 0.2s ease
+
+@media (max-width: 680px)
+    .container h2
+        font-size: 1em
+    .container
+        section
+            &.form
+                .form-group
+                    -ms-flex-direction: column
+                    flex-direction: column
+                    label
+                        width: 100%
+                        text-align: left
+                        padding: 0 10px
+                        margin-top: 10px
+                    .box
+                        width: 100%
